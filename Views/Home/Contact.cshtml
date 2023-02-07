@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "JNPC Contact Page";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+
+<head>
+    <meta name="keywords" content="McLoud, Pentecost, Church, Jesus" />
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    @Styles.Render("~/Style/css")
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/Scripts/email.js")
+    <link href="~/Style/HomeStyleSheet.css" rel="stylesheet" />
+</head>
+
+
+<address class="heading3">
+    <br />
+    Jesus Name Pentecostal Church<br />
+    Physical Address: 22250 Oklahoma St, Harrah, OK <br />
+    (On the corner of SE 29TH and Moran Dr) <br />
+    Mailing Address: P.O. Box 101, McLoud, OK 74851  <br />
+    Phone Number: (405)204-4316 <br />
+    Email: <a onclick="sendMail()">jnpcpastor@gmail.com</a> <br />
+    Facebook: <a target="_blank" href="https://www.facebook.com/JNPCofMcLoud">https://www.facebook.com/JNPCofMcLoud </a>
+</address>
+
+    <a class="btn btn-danger" onclick="sendMail()">Email the Pastor</a>
+
+    <div class="body">
+    </div>

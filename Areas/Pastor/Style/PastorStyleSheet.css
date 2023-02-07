@@ -1,0 +1,83 @@
+﻿.footer {
+    text-align: center;
+    width: 100%;
+    font: normal small-caps bold 0.9em/3em Quicksand;
+    font-family: Helvetica;
+    margin-top: auto;
+}
+
+
+.header {
+    background: BurlyWood;
+}
+
+.body {
+    background: BurlyWood;
+    font-family: helvetica;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.column1 {
+    width: 30%;
+    float: left;
+    padding: 1px;
+}
+
+.heading2 {
+    font-family: helvetica;
+    font-size: 400%;
+}
+
+.heading3 {
+    font-family: Helvetica;
+    font-size: 300%;
+}
+
+
+.column2 {
+    width: 60%;
+    float: right;
+    padding: 1px;
+    width: 650px;
+    height: 300px;
+}
+
+.lead {
+    font-family: 'Helvetica', fantasy;
+    text-align: center;
+    font-size: 30px;
+    clear: both;
+}
+
+.row {
+    background: BurlyWood;
+    display: block;
+    font-family: Helvetica;
+}
+
+.building {
+    width: 400px;
+    height: 300px;
+}
+
+.sign {
+    width: 650px;
+    height: 300px;
+}
+
+.PastorNavBar {
+    width: 100%;
+    background-color: saddlebrown;
+    font-family: Helvetica;
+}
+
+.table {
+    background: BurlyWood;
+    font-family: helvetica;
+}
+
+.Messages {
+    background: BurlyWood;
+    font-family: helvetica;    }

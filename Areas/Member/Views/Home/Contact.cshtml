@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Contact";
+    Layout = "~/Areas/Member/Views/Shared/_MemberLayout.cshtml";
+
+}
+
+<head>
+    <meta name="keywords" content="McLoud, Pentecost, Church, Jesus" />
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    @Styles.Render("~/Areas/Member/Style/css")
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/Scripts/email.js")
+    <link href="~/Areas/Member/Style/MemberStyleSheet.css" rel="stylesheet" />
+</head>
+
+<address style="font-family: helvetica; font-size: 300%">
+    Jesus Name Pentecostal Church<br />
+    P.O. Box 101<br />
+    McLoud, OK  74851 <br />
+</address>
+
+<br />
+
+<a class="btn btn-danger" onclick="sendMail()">Email the Pastor</a>
+<br />
+<br />
+<br />

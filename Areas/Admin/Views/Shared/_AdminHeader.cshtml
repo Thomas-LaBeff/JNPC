@@ -1,0 +1,33 @@
+﻿<div>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="AdminNavBar">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+               
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Index" ? "active":"" )">
+                        @Html.ActionLink("Admin Home", "Index", "Home", new { area = "Admin" }, new { @class = "navbar-brand" })
+                    </li>
+                    <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "About" ? "active":"" )">
+                        @Html.ActionLink("About", "About", "Home", new { Area = "Admin" }, new { })
+                    </li>
+                    <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Contact" ? "active":"" )">
+                        @Html.ActionLink("Contact", "Contact", "Home", new { Area = "Admin" }, new { })
+                    </li>
+                    <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "ServiceVideo" ? "active":"" )">
+                        @Html.ActionLink("Service Videos", "ServiceVideo", "Message/ServiceVideo", new { Area = "Admin" }, new { })
+                    </li>
+                    <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "" ? "active":"" )">
+                        @Html.ActionLink("Log Out", "Index", "Home", new { Area = "" }, new { })
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

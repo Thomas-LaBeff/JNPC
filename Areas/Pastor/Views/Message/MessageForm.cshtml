@@ -1,0 +1,79 @@
+﻿@model Church_App.Models.MessageModel
+
+@{
+    ViewBag.Title = "JNPC Message Form";
+    Layout = "~/Areas/Pastor/Views/Shared/_Layout.cshtml";
+}
+
+<h2 style="font-family: helvetica">MessageForm</h2>
+
+@using (Html.BeginForm("ProcessCreate", "Message", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+
+<div class="form-horizontal" style="font-family: helvetica">
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        @Html.LabelFor(model => model.ServiceDate, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.ServiceDate, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.ServiceDate, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.MessageTopic, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.MessageTopic, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.MessageTopic, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.MessageTitle, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.MessageTitle, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.MessageTitle, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Message_ID, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Message_ID, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Message_ID, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Video, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Video, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Video, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group" style="font-family: helvetica">
+         <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Save" class="btn btn-default" />
+         </div>
+    </div>
+
+ 
+        
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+ </div>
+}
+
+    <div style="font-family: helvetica">
+        @Html.ActionLink("Back to List", "/Index")
+        @Html.ActionLink("Go to Search Form", "/SearchForm")
+    </div>
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }

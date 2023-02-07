@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+        <link href="~/Content/bootstrap.css"/>
+        <script src="~/Scripts/jquery-3.4.1.js"></script>
+        <script src="~/Scripts/bootstrap.js"></script>
+        <link href="~/Areas/Pastor/Style/PastorStyleSheet.css" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div class="container body-content">
+        @RenderPage("_PastorHeader.cshtml")
+        @RenderBody()
+    </div>
+    @RenderPage("_PastorFooter.cshtml")
+</body>
+</html>

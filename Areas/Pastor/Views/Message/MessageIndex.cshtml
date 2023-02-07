@@ -1,0 +1,77 @@
+﻿@model IEnumerable<Church_App.Models.MessageModel>
+
+
+@{
+    ViewBag.Title = "JNPC Index";
+    Layout = "~/Areas/Pastor/Views/Shared/_PastorLayout.cshtml";
+}
+
+<head>
+    <meta name="keywords" content="McLoud, Pentecost, Church, Jesus" />
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    @Styles.Render("~/Areas/Pastor/Style/css")
+    @Styles.Render("~/Content/css")
+    <link href="~/Areas/Pastor/Style/PastorStyleSheet.css" rel="stylesheet" />
+</head>
+
+<h3 class="heading3">Messages</h3>
+<div class="Messages">
+    <p>
+        @Html.ActionLink("Create New", "Create")
+        &emsp;
+        @Html.ActionLink("Search", "SearchForm")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ServiceDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MessageTopic)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MessageTitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Message_ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Video)
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+
+            <tr>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.ServiceDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MessageTopic)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MessageTitle)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Message_ID)
+                </td>
+
+                <td>
+                    <a href="@Html.DisplayFor(modelItem => item.Video)" target="_blank">
+                        @Html.DisplayFor(modelItem => item.Video)
+                    </a>
+                </td>
+
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Message_ID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Message_ID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Message_ID })
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+
+

@@ -1,0 +1,77 @@
+﻿.footer {
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font: normal small-caps bold 0.9em/3em Quicksand;
+    font-family: Helvetica;
+    background-color: BurlyWood;
+}
+
+.header {
+    background: BurlyWood;
+}
+
+.body {
+    background: BurlyWood;
+    font-family: helvetica;
+    font-size: 200%;
+}
+
+.column1 {
+    width: 30%;
+    float: left;
+    padding: 1px;
+}
+
+.heading2 {
+    font-family: helvetica;
+    font-size: 400%;
+}
+
+.heading3 {
+    font-family: Helvetica;
+    font-size: 300%;
+}
+
+
+.column2 {
+    width: 60%;
+    float: right;
+    padding: 1px;
+    width: 650px;
+    height: 300px;
+}
+
+.lead {
+    font-family: 'Helvetica', fantasy;
+    text-align: center;
+    font-size: 30px;
+    clear: both;
+}
+
+.row {
+    background: BurlyWood;
+    display: block;
+    font-family: Helvetica;
+}
+
+.building {
+    width: 400px;
+    height: 300px;
+}
+
+.sign {
+    width: 650px;
+    height: 300px;
+}
+
+.MemberNavBar {
+    width: 100%;
+    background-color: saddlebrown;
+    font-family: Helvetica;
+}
+
+/*.btn btn-danger {
+    font-family: Helvetica;
+}*/

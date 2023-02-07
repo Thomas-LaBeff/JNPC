@@ -1,0 +1,61 @@
+﻿@model Church_App.Models.MessageModel
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Pastor/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MessageModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ServiceDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MessageTopic)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MessageTopic)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MessageTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MessageTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Message_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Message_ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Video)
+        </dt>
+
+        <dd>
+            <a href="@Html.DisplayFor(model => model.Video)" target="_blank">
+                @Html.DisplayFor(model => model.Video)
+            </a>
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Message_ID }) |
+    @Html.ActionLink("Back to List", "/Index")
+</p>

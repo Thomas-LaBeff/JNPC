@@ -1,0 +1,61 @@
+﻿@model IEnumerable<Church_App.Models.NeedToContactModel>
+
+@{
+    ViewBag.Title = "JNPC Need To Contact";
+    Layout = "~/Areas/Pastor/Views/Shared/_PastorLayout.cshtml";
+
+}
+
+<head>
+    <meta name="keywords" content="McLoud, Pentecost, Church, Jesus" />
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    @Styles.Render("~/Style/css")
+    @Styles.Render("~/Content/css")
+    <link href="~/Areas/Pastor/Style/PastorStyleSheet.css" rel="stylesheet" />
+</head>
+
+<h2 style="font-family: helvetica">Make an attempt to connect with the following contacts.</h2>
+
+    <table class="table" style="font-family: helvetica">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Contact_ID)
+            </th>
+            <th>
+            @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Recent_Contact)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Topic_Discussed)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Response)
+            </th>
+        </tr>
+
+        @foreach (var item in Model) // lists records on page
+        {
+
+    <tr>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.Contact_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Recent_Contact)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Topic_Discussed)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Response)
+        </td>
+    </tr>
+        }
+    </table>
+    <p class="body"></p>

@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="~/Style/HomeStyleSheet.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.css" />
+    <script src="~/Scripts/jquery-3.4.1.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div class="container body-content">
+        @RenderPage("_HomeHeader.cshtml")
+        @RenderBody()
+    </div>
+    @RenderPage("_HomeFooter.cshtml")
+</body>
+
+</html>

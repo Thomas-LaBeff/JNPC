@@ -1,0 +1,33 @@
+﻿<div>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="PastorNavBar">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+               
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Index" ? "active":"" )">
+                    @Html.ActionLink("Pastor Home", "Index", "Home", new { area = "Pastor" }, new { @class = "navbar-brand" })
+                    </li>
+                    <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "MessageIndex" ? "active":"" )">
+                    @Html.ActionLink("Messages", "MessageIndex", "Message", new { Area = "Pastor" }, new { })
+                    </li>
+                    <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "ContactDetails" ? "active":"" )">
+                        @Html.ActionLink("Contact Details", "ContactDetails", "ContactDetails", new { Area = "Pastor" }, new { })
+                    </li>
+                    <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "NeedToContact" ? "active":"" )">
+                        @Html.ActionLink("Need To Contact", "NeedToContact", "ContactDetails", new { Area = "Pastor" }, new { })
+                    </li>
+                    <li>
+                    @Html.ActionLink("Log Out", "Index", "Home", new { Area = "" }, new { })
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
